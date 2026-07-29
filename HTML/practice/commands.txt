@@ -1,0 +1,5 @@
+pws
+ls
+git status
+git commit
+git push
