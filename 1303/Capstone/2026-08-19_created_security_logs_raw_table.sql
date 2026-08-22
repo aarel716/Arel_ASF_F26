@@ -1,0 +1,28 @@
+CREATE TABLE security_logs_raw (
+    log_id SERIAL PRIMARY KEY,
+    event_time TIMESTAMP NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    user_role VARCHAR(30),
+    account_status VARCHAR(30),
+    ip_address VARCHAR(45),
+    port_number INTEGER,
+    device_type VARCHAR(30),
+    operating_system VARCHAR(30),
+    browser_name VARCHAR(30),
+    location_city VARCHAR(50),
+    location_region VARCHAR(50),
+    location_country VARCHAR(50),
+    event_type VARCHAR(50),
+    event_category VARCHAR(50),
+    action_taken VARCHAR(30),
+    status VARCHAR(30),
+    severity VARCHAR(20),
+    resource_type VARCHAR(50),
+    resource_name VARCHAR(100),
+    session_id VARCHAR(50),
+    failure_reason VARCHAR(100),
+    risk_score INTEGER CHECK (risk_score BETWEEN 0 AND 100),
+    watchlist_flag BOOLEAN,
+    notes TEXT
+);
+
