@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Demo 2</title>
+</head>
+<body>
+<form action="api/getData" method="get">
+
+    <label for="RepName">Representative Name</label>
+        <input type="text"
+               name="representative_name"
+               id="RepName"
+               maxlength="20"
+               required
+               placeholder="Max 20 characters">
+    <br>
+    <label for="GalComm">Galactic Communications</label>
+
+    <input type="email"
+               name="galactic_communications"
+               id="GalComm"
+               required
+               maxlength="100"
+               placeholder="Max 100 characters">
+    <br>
+    <label for="Crew">Crew Size Attending</label>
+    <input type="number"
+           name="crew_size_attending"
+           id="Crew"
+           required
+           min="1"
+           max="8">
+
+    <br>
+    Alliance
+        <input type="radio" name="alliance_name" id="starwars" value="starwars" required>
+        <label for="starwars">Star Wars</label>
+
+        <input type="radio" name="alliance_name" id="startrek" value="startrek">
+        <label for="startrek">Star Trek</label>
+
+        <input type="radio" name="alliance_name" id="snacks" value="snacks">
+        <label for="snacks">Snacks</label>
+    <br>
+
+    <label for="summitUpdates"></label> Summit Updates
+    <input type="checkbox"
+           name="summit_updates"
+           id="summitUpdates"
+           value="true"
+           checked>
+<!--  according to my research if the box it unchecked it will not send any data to the database  -->
+    <hr>
+    
+    <br>
+    <button type="submit">SUBMIT</button>
+    <br>
+    <button type="reset">RESET</button>
+
+
+    
+</form>
+</body>
+</html>
