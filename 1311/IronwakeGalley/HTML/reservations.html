@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Plan an evening aboard The Ironwake Galley with a reservation request for one to eight guests.">
+    <title>Reservations | The Ironwake Galley</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a class="brand" href="index.html">
+            <img src="assets/images/logo.png"
+                 alt="Ironwake logo">
+            <span>The Ironwake Galley</span>
+        </a>
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html"
+                       aria-current="page">Reservations</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content"
+      class="container page-content">
+    <header class="page-heading">
+        <h1>Reservations</h1>
+        <p>Reservations are <strong>request only</strong>. Your preferred date, time, and seating are subject to
+            availability; a request is not a confirmed booking.</p>
+    </header>
+
+    <figure class="seating-photo">
+        <img src="assets/images/seating.png"
+             alt="Ironwake Galley crew booth with booth seats, and brass windows.">
+        <figcaption>Our crew booth. Choose Crew booth under seating preference to request this area.</figcaption>
+    </figure>
+
+    <div class="reservation-layout">
+        <section class="card reservation-card"
+                 aria-labelledby="form-heading">
+            <h2 id="form-heading">Request a table</h2>
+            <p class="small-text">Required fields are marked “required.” Parties of 1–8 are welcome.</p>
+
+            <form action="reservations.html" method="get">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="guest-name">Name <span class="field-hint">(required)</span></label>
+                        <input type="text"
+                               id="guest-name"
+                               name="guest-name"
+                               required maxlength="20"
+                               autocomplete="name"
+                               aria-describedby="name-help">
+                        <p class="field-help" id="name-help">Maximum 20 characters.</p>
+                    </div>
+                    <div class="form-field">
+                        <label for="guest-email">Email <span class="field-hint">(required)</span></label>
+                        <input type="email"
+                               id="guest-email"
+                               name="guest-email"
+                               required autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="party-size">Party size <span class="field-hint">(required)</span></label>
+                    <select id="party-size"
+                            name="party-size"
+                            required>
+                        <option value="" disabled selected>Select number of guests</option>
+                        <option value="1">1 guest</option>
+                        <option value="2">2 guests</option>
+                        <option value="3">3 guests</option>
+                        <option value="4">4 guests</option>
+                        <option value="5">5 guests</option>
+                        <option value="6">6 guests</option>
+                        <option value="7">7 guests</option>
+                        <option value="8">8 guests</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="visit-date">Date <span class="field-hint">(required)</span></label>
+                        <input type="date" id="visit-date" name="visit-date" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="visit-time">Time <span class="field-hint">(required)</span></label>
+                        <input type="time"
+                               id="visit-time"
+                               name="visit-time"
+                               required
+                               min="16:00"
+                               max="21:00"
+                               aria-describedby="time-help">
+                        <p class="field-help" id="time-help">Arrival between 4 and 9 p.m. We close at 10 p.m.</p>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Seating preference <span class="field-hint">(required)</span></legend>
+                    <div class="choice-row">
+                        <input type="radio"
+                               id="porthole"
+                               name="seating"
+                               value="porthole"
+                               required>
+                        <label for="porthole">Porthole table </label>
+                    </div>
+                    <div class="choice-row">
+                        <input type="radio"
+                               id="crew-booth"
+                               name="seating"
+                               value="crew-booth"
+                               required>
+                        <label for="crew-booth">Crew booth </label>
+                    </div>
+                    <div class="choice-row">
+                        <input type="radio"
+                               id="galley-floor"
+                               name="seating"
+                               value="galley-floor"
+                               required>
+                        <label for="galley-floor">Galley floor </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-field">
+                    <label for="dietary-notes">Dietary notes <span class="field-hint">(optional)</span></label>
+                    <textarea id="dietary-notes"
+                              name="dietary-notes"
+                              rows="3"
+                              maxlength="30"
+                              aria-describedby="dietary-help"></textarea>
+                    <p class="field-help" id="dietary-help">Maximum 30 characters.</p>
+                </div>
+
+                <div class="choice-row newsletter-choice">
+                    <input type="checkbox"
+                           id="newsletter"
+                           name="newsletter"
+                           value="yes">
+                    <label for="newsletter">Sign me up for the newsletter <span class="choice-description">Restaurant news and menu updates. Optional.</span></label>
+                </div>
+
+                <div class="button-group form-buttons">
+                    <button class="button" type="submit">Submit request</button>
+                    <button class="button reset" type="reset">Reset form</button>
+                </div>
+            </form>
+        </section>
+
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <p class="footer-brand">The Ironwake Galley</p>
+        <p>North Tower, Dock 07 · Brasshaven</p>
+        <p>Daily, 4–10 p.m.</p>
+    </div>
+</footer>
+</body>
+</html>
