@@ -281,7 +281,7 @@ GROUP BY sl.username
 HAVING COUNT(*) > 1
 ORDER BY failed_events DESC;
 
-2
+
 -- Query 19
 -- Looking for sessions with several failed events.
 -- This could show a session having repeated issues.
