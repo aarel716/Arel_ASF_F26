@@ -1,35 +1,72 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
     <title>Menu | The Ironwake Galley</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
 
-<header class="site-header">
-    <div class="container">
-        <a class="brand"
-           href="index.html">
-            <img src="assets/images/logo.png"
-                 alt="Ironwake logo">
-            <span>The Ironwake Galley</span>
-        </a>
-        <nav aria-label="Main navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html" 
-                       aria-current="page">Menu</a></li>
-                <li><a href="reservations.html">Reservations</a></li>
-            </ul>
-        </nav>
-    </div>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark site-header">
+
+        <div class="container">
+
+            <a class="navbar-brand brand"
+               href="index.html">
+
+                <img src="assets/images/logo.png"
+                     alt="Ironwake logo">
+                <span>The Ironwake Galley</span>
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"
+                 id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="menu.html">
+                            Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="reservations.html">
+                            Reservations
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 
 <main id="main-content"
@@ -40,14 +77,24 @@
             vegetables, and hot and cold drinks.</p>
     </header>
 
-    <section class="menu-feature"
+    <section class="menu-feature row align-items-center"
              aria-labelledby="special-heading">
-        <img src="assets/images/Beef%20Dish.png"
-             alt="Slow-braised beef, crisp roast potatoes, and glazed carrots">
-        <div class="menu-feature-copy">
-            <h2 id="special-heading">Ironwake Short Rib</h2>
-            <p>Slow-braised beef, crisp roast potatoes, and glazed carrots. This is Captain Mabel's favorite meal.</p>
-            <p class="feature-price">$24.00</p>
+        <div class="col-md-5">
+
+            <img src="assets/images/Beef%20Dish.png"
+                 alt="Slow-braised beef, crisp roast potatoes, and glazed carrots">
+        </div>
+        <div class="col-md-7 menu-feature-copy">
+            <h2 id="special-heading">
+                Ironwake Short Rib
+            </h2>
+            <p>
+                Slow-braised beef, crisp roast potatoes,
+                and glazed carrots. This is Captain Mabel's favorite meal.
+            </p>
+            <p class="feature-price"
+               id="feature-price">
+            </p>
         </div>
     </section>
 
@@ -59,7 +106,7 @@
 
         <div class="table-menu">
 
-            <table>
+            <table class="table">
                 <caption>Galley plates and drinks · All prices in USD</caption>
                 <thead>
                 <tr>
@@ -69,55 +116,8 @@
                     <th scope="col">Notes</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">Ironwake Short Rib</th>
-                    <td>Braised beef, roast potatoes, and glazed carrots</td>
-                    <td class="price">$24.00</td>
-                    <td>Captain's favorite</td>
-                </tr>
-                <tr>
-                    <th scope="row">Boilerhouse Bento</th>
-                    <td>Ginger chicken, steamed rice, and pickled vegetables</td>
-                    <td class="price">$18.00</td>
-                    <td>Popular</td>
-                </tr>
-                <tr>
-                    <th scope="row">Foxfire Noodles</th>
-                    <td>Chili tofu, noodles, mushrooms, and sesame greens</td>
-                    <td class="price">$17.00</td>
-                    <td>Vegan · Spicy</td>
-                </tr>
-                <tr>
-                    <th scope="row">Skygarden Bowl</th>
-                    <td>Roasted squash, chickpeas, rice, and lemon dressing</td>
-                    <td class="price">$16.00</td>
-                    <td>Vegan</td>
-                </tr>
-                <tr>
-                    <th scope="row">Dockworker's Pie</th>
-                    <td>Mushroom and lentil pie with mashed potato topping</td>
-                    <td class="price">$19.00</td>
-                    <td>Vegetarian</td>
-                </tr>
-                <tr>
-                    <th scope="row">Little Aviator Plate</th>
-                    <td>Grilled chicken, rice, and steamed carrots</td>
-                    <td class="price">$11.00</td>
-                    <td>Smaller portion</td>
-                </tr>
-                <tr>
-                    <th scope="row">Copper Kettle Tea</th>
-                    <td>Warm apple tea with cinnamon and a lemon slice</td>
-                    <td class="price">$5.00</td>
-                    <td>Caffeine-free</td>
-                </tr>
-                <tr>
-                    <th scope="row">Piston Ginger Fizz</th>
-                    <td>House ginger soda over ice with fresh lime</td>
-                    <td class="price">$6.00</td>
-                    <td>Non-alcoholic</td>
-                </tr>
+                <tbody id="menu-body">
+
                 </tbody>
             </table>
         </div>
@@ -135,5 +135,13 @@
         <p>Daily, 4–10 p.m.</p>
     </div>
 </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+<script src="assets/script.js"
+        defer></script>
 </body>
 </html>

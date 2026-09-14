@@ -2,35 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
     <title>The Ironwake Galley | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
+
 <body>
 
-<header class="site-header">
-    <div class="container">
-        <a class="brand"
-           href="index.html">
-            <img src="assets/images/logo.png"
-                 alt="Ironwake logo">
-            <span>The Ironwake Galley</span>
-        </a>
-        <nav aria-label="Main navigation">
-            <ul class="nav-links">
-                <li><a href="index.html"
-                       aria-current="page">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="reservations.html">Reservations</a></li>
-            </ul>
-        </nav>
-    </div>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark site-header">
+
+        <div class="container">
+
+            <a class="navbar-brand brand"
+               href="index.html">
+
+                <img src="assets/images/logo.png"
+                     alt="Ironwake logo">
+                <span>The Ironwake Galley</span>
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"
+                 id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="menu.html">
+                            Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="reservations.html">
+                            Reservations
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 
 <main id="main-content"
@@ -45,25 +79,43 @@
         <p>Our restaurant is inside an old cargo airship at North Tower, Dock 07.</p>
     </section>
 
-    <section class="welcome"
-             aria-labelledby="welcome-heading">
-        <h2 id="welcome-heading">Welcome aboard</h2>
-        <img class="welcome-photo"
-             src="assets/images/Dining%20Area.png"
-             alt="A host welcomes guests into the main dining area.">
-        <p>Captain Mabel Wrench turned her old airship into a place for crews and travelers to eat.</p>
-        <p>The kitchen uses steam-powered cookers. We serve beef, chicken, noodles, and a few vegetarian meals. You can sit by a window or choose a booth near the kitchen.</p>
-        <p>The ship stays docked during dinner, so you do not need a flight ticket.</p>
-        <p><a href="menu.html">See our menu</a> or <a href="reservations.html">request a table</a>.</p>
-    </section>
+    <div class="row">
+        <section class="welcome col-12"
+                 aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">Welcome aboard!</h2>
+            <img class="welcome-photo"
+                 src="assets/images/Dining%20Area.png"
+                 alt="A host welcomes guests into the main dining area.">
 
-    <aside class="card"
-           aria-labelledby="hours-heading">
-        <h2 id="hours-heading"><i class="fa-solid fa-clock" aria-hidden="true"></i> Hours and location</h2>
-        <p><strong>Open:</strong> Every day, 4–10 p.m.</p>
-        <p><strong>Find us:</strong> North Tower, Dock 07, Brasshaven.</p>
-        <p>Take the passenger lift to the dock. Tables seat 1–8 guests.</p>
-    </aside>
+            <p>Captain Mabel Wrench turned her old airship into a place for crews and travelers to eat.</p>
+            <p>The kitchen uses steam-powered cookers. We serve beef, chicken, noodles, and a few vegetarian meals. You can sit by a window or choose a booth near the kitchen.</p>
+            <p>The ship stays docked during dinner, so you do not need a flight ticket.</p>
+            <p>
+                <a href="menu.html">See our menu</a>
+                or
+                <a href="reservations.html">request a table</a>.
+            </p>
+        </section>
+        <aside class="col-12"
+               aria-labelledby="hours-heading">
+            <div class="card info-card">
+                <h2 id="hours-heading">
+                    <i class="fa-solid fa-clock"
+                       aria-hidden="true"></i>
+                    Hours and location
+                </h2>
+                <p><strong>Open:</strong> Every day, 4–10 p.m.</p>
+                <p>
+                    <strong>Find us:</strong>
+                    North Tower, Dock 07, Brasshaven.
+                </p>
+                <p>
+                    Take the passenger lift to the dock.
+                    Tables seat 1–8 guests.
+                </p>
+            </div>
+        </aside>
+    </div>
 </main>
 
 <footer class="site-footer">
@@ -77,5 +129,11 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+<script src="assets/script.js"
+        defer></script>
 </body>
 </html>

@@ -1,14 +1,15 @@
-/*Color choices: Dark gray gives the feeling of airship metal, brass/ yellow color matches the steam-punk feel, and light text helps readability.*/
+/*Color choices: Dark gray gives the feeling of airship metal, brass/yellow color matches the steam-punk feel, and light text helps readability.*/
 
 /*Main colors*/
 :root {
     --page-background: #202526;
-    --header-background: #161c1d;
+    --header-background: rgb(22 28 29 / 0.77);
     --card-background: #2b3433;
     --text-color: #eeeeea;
     --heading-color: #dab87e;
     --link-color: #91d0c6;
 }
+
 
 /*Basic page styles*/
 * {
@@ -18,16 +19,16 @@
 body {
     margin: 0;
     background-color: var(--page-background);
+    background-image: url("images/ironwake-background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
     color: var(--text-color);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 960px;
-    margin: 0 auto;
 }
 
 .page-content {
@@ -44,11 +45,19 @@ h1 {
     margin: 0 0 12px;
     color: var(--heading-color);
     font-size: 40px;
+    text-shadow: 2px 2px 4px #000;
 }
 
 h2 {
     margin: 0 0 12px;
     font-size: 24px;
+}
+
+#welcome-heading{
+    color: var(--heading-color);
+    font-weight: bold;
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 30px;
 }
 
 p {
@@ -66,20 +75,16 @@ img {
     border: 1px solid #80745f;
 }
 
-/*Header and logo*/
+/*Header and Bootstrap navbar*/
 .site-header {
     background-color: var(--header-background);
     border-bottom: 2px solid var(--heading-color);
-    text-align: center;
-    padding: 16px 0;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 12px;
-    margin-bottom: 16px;
     color: var(--text-color);
     font-size: 26px;
     text-decoration: none;
@@ -88,6 +93,22 @@ img {
 .brand img {
     width: 60px;
     height: 60px;
+    border: none;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-color);
+    padding: 8px 18px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--card-background);
+    color: var(--heading-color);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--heading-color);
+    text-decoration: underline;
 }
 
 .nav-links {
@@ -106,14 +127,6 @@ img {
     text-decoration: none;
 }
 
-.nav-links a[aria-current="page"] {
-    text-decoration: underline;
-}
-
-.nav-links a:hover {
-    background-color: var(--card-background);
-    color: var(--heading-color);
-}
 
 /*Home page*/
 .home-intro {
@@ -124,26 +137,34 @@ img {
     font-size: 18px;
 }
 
+
 .airship-photo {
-    width: 100%;
-    margin: 20px 0 12px;
-}
+    width: 95%;
+    max-width: 1100px;
+    height: 360px;
+    object-fit: cover;
+    margin: 20px auto 12px;}
+
 
 .welcome {
     margin-top: 28px;
 }
+
 
 .welcome-photo {
     width: 480px;
     margin: 0 auto 20px;
 }
 
+
 .card {
     margin: 24px 0;
     padding: 20px;
     border: 1px solid #80745f;
     background-color: var(--card-background);
+    color: var(--text-color);
 }
+
 
 /*Font Awesome: clock beside hours and location on Home page*/
 .fa-clock {
@@ -151,20 +172,24 @@ img {
     color: var(--heading-color);
 }
 
+
 .page-heading {
     margin-bottom: 24px;
 }
 
+
 /*Menu page*/
+
 .menu-feature {
-    display: flex;
-    align-items: center;
-    gap: 20px;
     margin-bottom: 28px;
 }
 
 .menu-feature img {
-    width: 320px;
+    width: 100%;
+}
+
+.menu-feature-copy {
+    padding: 16px;
 }
 
 .feature-price {
@@ -184,6 +209,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+    color: var(--text-color);
 }
 
 caption {
@@ -198,14 +224,19 @@ td {
     padding: 12px;
     border: 1px solid #80745f;
     vertical-align: top;
+    background-color: rgba(32, 37, 38, 0.8)!important;
+    color: var(--text-color)!important;
 }
 
-thead {
-    background-color: #3b5049;
+
+thead th {
+    background-color: rgb(59 80 73 / 0.8) !important;
 }
 
-tbody tr:nth-child(even) {
-    background-color: var(--card-background);
+
+tbody tr:nth-child(even) td,
+tbody tr:nth-child(even) th {
+    background-color: rgb(43 52 51 / 0.8) !important;
 }
 
 .price {
@@ -225,23 +256,32 @@ tbody tr:nth-child(even) {
     font-size: 14px;
 }
 
+
 /*Reservations*/
 .seating-photo {
     max-width: 640px;
     margin: 0 auto 24px;
 }
 
+
 .seating-photo img {
     width: 100%;
 }
+
 
 .seating-photo figcaption {
     margin-top: 8px;
 }
 
+
 .reservation-layout {
     max-width: 640px;
     margin: 0 auto;
+}
+
+.reservation-card {
+    background-color: var(--card-background);
+    color: var(--text-color);
 }
 
 .form-field {
@@ -261,6 +301,7 @@ button {
     font-size: 16px;
 }
 
+
 .form-field input,
 .form-field select,
 .form-field textarea {
@@ -275,9 +316,11 @@ textarea {
     resize: vertical;
 }
 
+
 .field-help {
     margin: 4px 0 0;
 }
+
 
 fieldset {
     margin: 0 0 20px;
@@ -287,6 +330,7 @@ fieldset {
 
 legend {
     padding: 0 6px;
+    font-size: 18px;
 }
 
 .choice-row {
@@ -318,14 +362,31 @@ legend {
     cursor: pointer;
 }
 
+
+.button:hover {
+    background-color: #c9a56b;
+}
+
+
 .reset {
     background-color: #e2e5df;
+}
+
+
+/*Bootstrap error and success alerts*/
+.alert {
+    margin-top: 16px;
+}
+
+.alert ul {
+    margin-bottom: 0;
 }
 
 /*Footer*/
 .site-footer {
     padding: 20px 0;
     border-top: 1px solid #80745f;
+    background-color: var(--header-background);
     text-align: center;
     font-size: 14px;
 }
