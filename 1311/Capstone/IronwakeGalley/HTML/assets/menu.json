@@ -1,0 +1,102 @@
+
+[
+  {
+    "id": 1,
+    "name": "Brasshaven Breakfast Plate",
+    "description": "Eggs, potatoes, toast, and smoked sausage",
+    "price": 14,
+    "category": "Breakfast",
+    "note": "Made to order",
+    "img": "assets/images/menu/breakfast_plate.png"
+  },
+  {
+    "id": 2,
+    "name": "Copper Kettle Tea",
+    "description": "Warm apple tea with cinnamon and a lemon slice",
+    "price": 5,
+    "category": "Breakfast",
+    "note": "Caffeine-free",
+    "img": "assets/images/menu/copper_tea.png"
+  },
+  {
+    "id": 3,
+    "name": "Skygarden Bowl",
+    "description": "Roasted squash, chickpeas, rice, and lemon dressing",
+    "price": 16,
+    "category": "Lunch",
+    "note": "Vegan",
+    "img": "assets/images/menu/skygarden_bowl.png"
+  },
+  {
+    "id": 4,
+    "name": "Little Aviator Plate",
+    "description": "Grilled chicken, rice, and steamed carrots",
+    "price": 11,
+    "category": "Lunch",
+    "note": "Smaller portion",
+    "img": "assets/images/menu/little_aviator.png"
+  },
+  {
+    "id": 5,
+    "name": "Engineer's Sandwich",
+    "description": "Roast chicken, cheese, greens, and mustard",
+    "price": 15,
+    "category": "Lunch",
+    "note": "Crew favorite",
+    "img": "assets/images/menu/engineers_sandwich.png"
+  },
+  {
+    "id": 6,
+    "name": "Piston Ginger Fizz",
+    "description": "House ginger soda over ice with fresh lime",
+    "price": 6,
+    "category": "Lunch",
+    "note": "Non-alcoholic",
+    "img": "assets/images/menu/piston_ginger.png"
+  },
+  {
+    "id": 7,
+    "name": "Ironwake Short Rib",
+    "description": "Braised beef, roast potatoes, and glazed carrots",
+    "price": 24,
+    "category": "Dinner",
+    "note": "Captain's favorite",
+    "img": "assets/images/menu/beef_dish.png"
+  },
+  {
+    "id": 8,
+    "name": "Boilerhouse Bento",
+    "description": "Ginger chicken, steamed rice, and pickled vegetables",
+    "price": 18,
+    "category": "Dinner",
+    "note": "Chef favorite",
+    "img": "assets/images/menu/boilerhouse_bento.png"
+  },
+  {
+    "id": 9,
+    "name": "Foxfire Noodles",
+    "description": "Chili tofu, noodles, mushrooms, and sesame greens",
+    "price": 17,
+    "category": "Dinner",
+    "note": "Vegan / Spicy",
+    "img": "assets/images/menu/foxfire_noodles.png"
+  },
+  {
+    "id": 10,
+    "name": "Dockworker's Pie",
+    "description": "Mushroom and lentil pie with mashed potato topping",
+    "price": 19,
+    "category": "Dinner",
+    "note": "Vegetarian",
+    "img": "assets/images/menu/dockworkers_pie.png"
+  },
+  {
+    "id": 11,
+    "name": "Captain's Chocolate Cake",
+    "description": "Warm chocolate cake with vanilla cream",
+    "price": 8,
+    "category": "Dinner",
+    "note": "House dessert",
+    "img": "assets/images/menu/captains_chocolate_cake.png"
+  }
+]
