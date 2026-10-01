@@ -50,12 +50,14 @@ describe('Edge cases', () => {
     test('returns true for an empty string', () => {
         expect(isPalindrome("")).toBe(true);
     })
-    test("returns true for a very long palindrome", () => {
+});
+
+describe('Long inputs', () => {
+
+    test("returns true for long palindrome", () => {
         const longPalindrome = "A man, a plan, a canal: Panama! ".repeat(1000);
         expect(isPalindrome(longPalindrome)).toBe(true);
     });
-});
-
-
+})
 
 

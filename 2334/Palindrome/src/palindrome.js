@@ -6,8 +6,8 @@ const isPalindrome = (value) => {
     let word=value.toLowerCase()
     word = word.replace(/[^a-z0-9]/g, "");
     const reversed = word.split("").reverse().join("");
-    console.log(word)
-    console.log(reversed);
+    // console.log(word)
+    // console.log(reversed);
 
     return word === reversed
 }
