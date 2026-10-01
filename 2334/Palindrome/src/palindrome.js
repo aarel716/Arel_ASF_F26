@@ -3,11 +3,13 @@ const isPalindrome = (value) => {
         return false
     }
 
-const reversed = value.split("").reverse().join("");
-    console.log(value)
+    let word=value.toLowerCase()
+    word = word.replace(/[^a-z0-9]/g, "");
+    const reversed = word.split("").reverse().join("");
+    console.log(word)
     console.log(reversed);
 
-    return value === reversed
+    return word === reversed
 }
 
 
