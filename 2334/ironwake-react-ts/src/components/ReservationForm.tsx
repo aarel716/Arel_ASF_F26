@@ -151,8 +151,8 @@ const ReservationForm = () => {
     const onSubmit = (data: ReservationData) => {
         setConfirmation(
             `Thank you, ${data.name}! ` +
-            "Your reservation request has been recorded for this demo. " +
-            "Your table is not confirmed. No request has been sent to a server."
+            "Your reservation request has been recorded. " +
+            "Your table is not confirmed."
         );
 
         reset();
