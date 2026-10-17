@@ -32,7 +32,7 @@ const ReservationsPage = () => {
                     </h2>
 
                     <p>
-                        <strong>Breakfast &; Lunch:</strong>
+                        <strong>Breakfast & Lunch:</strong>
                         {" "}7 a.m.–noon
                     </p>
 

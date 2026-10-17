@@ -74,7 +74,7 @@ const MenuPage = ({addToCart}: MenuPageProps) => {
                 </p>
 
                 <p>
-                    <strong>Breakfast &; Lunch:</strong>
+                    <strong>Breakfast & Lunch:</strong>
                     {" "}7 a.m.–1 p.m.
                 </p>
 
